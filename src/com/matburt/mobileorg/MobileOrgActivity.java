@@ -24,6 +24,7 @@ import com.matburt.mobileorg.Parsing.OrgFileParser;
 import com.matburt.mobileorg.Settings.SettingsActivity;
 import com.matburt.mobileorg.Synchronizers.DropboxSynchronizer;
 import com.matburt.mobileorg.Synchronizers.SDCardSynchronizer;
+import com.matburt.mobileorg.Synchronizers.ScpSynchronizer;
 import com.matburt.mobileorg.Synchronizers.Synchronizer;
 import com.matburt.mobileorg.Synchronizers.WebDAVSynchronizer;
 
@@ -455,6 +456,9 @@ public class MobileOrgActivity extends ListActivity
         }
         else if (userSynchro.equals("dropbox")) {
             appSync = new DropboxSynchronizer(this);
+        }
+        else if (userSynchro.equals("scp")) {
+            appSync = new ScpSynchronizer(this);
         }
         else {
             this.onShowSettings();
