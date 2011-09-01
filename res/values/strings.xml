@@ -41,4 +41,8 @@
   <string name="priority">Priority</string>
   <string name="todo_state">Todo state</string>
   <string name="back">Back</string>
+  <string name="up_one_level">Up one level</string>
+  <string name="please_wait">Please wait...</string>
+  <string name="signing_in">Signing in</string>
+  <string name="pick_folder">Choose a folder to sync from:</string>
 </resources>
