@@ -2,6 +2,8 @@ package com.matburt.mobileorg.Settings;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import android.content.Context;
 
 import com.dropbox.client.DropboxAPI;
@@ -71,7 +73,10 @@ public interface DirectoryBrowser {
 				directoryNames.add( upOneLevel );
 				directoryListing.add( curDirectory.getParentFile() );
 			}
-			for(File dir:curDirectory.listFiles()) {
+			File[] tmpListing = curDirectory.listFiles();
+			//default list order doesn't seem to be alpha
+			Arrays.sort(tmpListing);
+			for(File dir:tmpListing) {
 				if ( dir.isDirectory() 
 						&& dir.canWrite() ) {
 					directoryNames.add( dir.getName() );

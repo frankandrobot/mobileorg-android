@@ -19,7 +19,7 @@
                         xmlns:android="http://schemas.android.com/apk/res/android"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="60dp"
+                        android:paddingBottom="80dp"
                         android:id="@+id/wizard_folder_list"/>
                         <!-- 60dp = 48dp size of arrows + 10dp margin -->
 	</LinearLayout>
